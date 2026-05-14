@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "set-env": "node scripts/set-env.js",
+    "set-env:prod": "node scripts/set-env.js --prod",
+    "start": "node scripts/set-env.js && ng serve --configuration=local",
+    "start:dev": "ng serve",
+    "build": "node scripts/set-env.js --prod && ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

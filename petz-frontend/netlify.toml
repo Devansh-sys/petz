@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "dist/petz-frontend/browser"
+
+# GEMINI_KEY is a client-side API key (visible in browser devtools by design).
+# Omit it from Netlify's secrets scanner to prevent false-positive build failures.
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "GEMINI_KEY"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

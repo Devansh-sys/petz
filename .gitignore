@@ -6,6 +6,8 @@ petz-backend/.env
 petz-frontend/node_modules/
 petz-frontend/.angular/cache/
 petz-frontend/dist/
+petz-frontend/.env
+petz-frontend/src/environments/environment.local.ts
 
 # ── Docs / generated files ───────────────────────────────
 docs/

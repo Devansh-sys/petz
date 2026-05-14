@@ -24,7 +24,7 @@ export class HealioService {
     const systemPrompt = this.buildSystemPrompt(ctx);
     const genAI        = new GoogleGenerativeAI(environment.geminiKey);
     const model        = genAI.getGenerativeModel({
-      model: 'gemini-2.5-flash-lite',
+      model: 'gemini-2.5-flash',
       systemInstruction: systemPrompt,
     });
 
