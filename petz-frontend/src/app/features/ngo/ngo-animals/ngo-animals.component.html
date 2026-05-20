@@ -50,7 +50,9 @@
           <label class="field-label">City</label>
           <mat-form-field appearance="outline">
             <mat-icon matPrefix style="color:#8BA3B5;margin-right:6px">place</mat-icon>
-            <input matInput [(ngModel)]="newAnimal.city">
+            <mat-select [(ngModel)]="newAnimal.city" placeholder="Select city">
+              <mat-option *ngFor="let city of cities" [value]="city">{{ city }}</mat-option>
+            </mat-select>
           </mat-form-field>
         </div>
       </div>

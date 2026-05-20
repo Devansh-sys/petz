@@ -26,6 +26,13 @@ export class NgoAnimalsComponent implements OnInit {
 
   filter = { search: '', species: '', status: '', sort: 'newest' };
 
+  readonly cities: string[] = [
+    'Ahmedabad', 'Bengaluru', 'Bhopal', 'Chennai', 'Coimbatore',
+    'Delhi', 'Hyderabad', 'Indore', 'Jaipur', 'Kochi',
+    'Kolkata', 'Lucknow', 'Mumbai', 'Nagpur', 'Patna',
+    'Pune', 'Surat', 'Thiruvananthapuram', 'Vadodara', 'Visakhapatnam',
+  ];
+
   get availableCount()  { return this.animals.filter(a => a.status === 'AVAILABLE').length; }
   get adoptedCount()    { return this.animals.filter(a => a.status === 'ADOPTED').length; }
   get vaccinatedCount() { return this.animals.filter(a => a.isVaccinated).length; }
